@@ -16,36 +16,35 @@ public class ExcluirCliente {
         navegar.findElement(By.cssSelector("select[id='switch-version-select']")).click();
         navegar.findElement(By.cssSelector("select[id='switch-version-select']")).sendKeys("Bootstrap V4 Theme", Keys.ENTER);
         navegar.findElement(By.xpath("//*[@id=\"gcrud-search-form\"]/div[1]/div[1]/a")).click();
-        navegar.findElement(By.cssSelector("input[id='field-customerName']")).sendKeys("Teste Sicredi");
-        navegar.findElement(By.cssSelector("input[id='field-contactLastName']")).sendKeys("Teste");
+        navegar.findElement(By.cssSelector("input[id='field-customerName']")).sendKeys("Automação Java - Maven");
+        navegar.findElement(By.cssSelector("input[id='field-contactLastName']")).sendKeys("Estudo");
         navegar.findElement(By.cssSelector("input[id='field-contactFirstName']")).sendKeys("Jéssica Espíndola da Silva");
-        navegar.findElement(By.cssSelector("input[id='field-phone']")).sendKeys("51 9999-9999");
-        navegar.findElement(By.cssSelector("input[id='field-addressLine1']")).sendKeys("Av Assis Brasil, 3970");
-        navegar.findElement(By.cssSelector("input[id='field-addressLine2']")).sendKeys("Torre D");
-        navegar.findElement(By.cssSelector("input[id='field-city']")).sendKeys("Porto Alegre");
-        navegar.findElement(By.cssSelector("input[id='field-state']")).sendKeys("RS");
-        navegar.findElement(By.cssSelector("input[id='field-postalCode']")).sendKeys("91000-000");
+        navegar.findElement(By.cssSelector("input[id='field-phone']")).sendKeys("48 9999-9999");
+        navegar.findElement(By.cssSelector("input[id='field-addressLine1']")).sendKeys("Rua Rosa das Rosas");
+        navegar.findElement(By.cssSelector("input[id='field-addressLine2']")).sendKeys("Compl");
+        navegar.findElement(By.cssSelector("input[id='field-city']")).sendKeys("Criciúma");
+        navegar.findElement(By.cssSelector("input[id='field-state']")).sendKeys("SC");
+        navegar.findElement(By.cssSelector("input[id='field-postalCode']")).sendKeys("88818-000");
         navegar.findElement(By.cssSelector("input[id='field-country']")).sendKeys("Brasil");
-        navegar.findElement(By.cssSelector("input[class='numeric form-control']")).sendKeys("Fixed");
-        navegar.findElement(By.cssSelector("input[id='field-creditLimit']")).sendKeys("200");
+        //  navegar.findElement(By.cssSelector("input[class='numeric form-control']")).sendKeys("Fixed");
+        navegar.findElement(By.cssSelector("input[id='field-creditLimit']")).sendKeys("121");
         navegar.findElement(By.cssSelector("button[class=\"btn btn-secondary btn-success b10\"]")).click();
-
         String mensagemSucesso = navegar.findElement(By.cssSelector("div[id=\"report-success\"]")).getText();
-        String expectedCadastrar = "Your data has been successfully stored into the database. Edit Record or Go back to list";
+        String expected = "Your data has been successfully stored into the database. Edit Record or Go back to list";
 
-        if(mensagemSucesso.equals(expectedCadastrar)){
+        if(mensagemSucesso.equals(expected)){
             System.out.println("Sucesso");
         }else{
             System.out.println("A mensagem encontrada ao cadastrar o cliente com sucesso foi: " + mensagemSucesso);
         }
 
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         navegar.findElement(By.cssSelector("a[href=\"/v1.x/demo/my_boss_is_in_a_hurry/bootstrap-v4/\"]")).click();
 
-        navegar.findElement(By.cssSelector("input[placeholder=\"Search CustomerName\"]")).sendKeys("Teste Sicredi", Keys.ENTER);
+        navegar.findElement(By.cssSelector("input[placeholder=\"Search CustomerName\"]")).sendKeys("Automação Java - Maven", Keys.ENTER);
         Thread.sleep(3000);
         navegar.findElement(By.xpath("//*[@id=\"gcrud-search-form\"]/div[2]/table/thead/tr[2]/td[1]/div/input")).click();
-        navegar.findElement(By.cssSelector("a[class=\"btn btn-outline-dark delete-selected-button\"]")).click();
+        navegar.findElement(By.cssSelector("i[class=\"fa fa-times el el-remove clear-search\"]")).click();
 
 
         String alertaModal = navegar.findElement(By.cssSelector("p[class='alert-delete-multiple-one']")).getText();

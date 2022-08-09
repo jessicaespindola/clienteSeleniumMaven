@@ -1,13 +1,8 @@
 
-
-# Prova técnica de Automação de Teste
-
-# Criado um projeto baseado em Maven utilizando a linguagem de programação Java.
+# Projeto de estudo de automação de testes Selenium com Maven utilizando a linguagem de programação Java.
 
 
-## 🔖 Desafio 1
-
-### Cadastro de cliente
+## 🔖 Cadastro de cliente
 
 - [X] Acessar a página:  https://www.grocerycrud.com/v1.x/demo/my_boss_is_in_a_hurry/bootstrap
 - [X] Mudar o valor da combo Select version para “Bootstrap V4 Theme”
@@ -19,26 +14,24 @@
 
 | campos           | descrição                  |
 |------------------|:---------------------------|
-| Name             | Teste Sicredi              |
+| Name             | Automação Java - Maven     |
 | Last name        | Teste                      |
 | ContactFirstName | Jéssica Espíndola da Silva |
-| Phone            | 51 9999-9999               |
-| AddressLine1     | Av Assis Brasil, 3970      |
-| AddressLine2     | Torre D                    |
-| City             | Porto Alegre               |
-| State            | RS                         |
-| PostalCode       | 91000-000                  |
+| Phone            | 48 9999-9999               |
+| AddressLine1     | Rua Rosa das Rosas         |
+| AddressLine2     | xxx                        |
+| City             | Criciúma                   |
+| State            | SC                         |
+| PostalCode       | 88818-000                  |
 | Country          | Brasil                     |
 | from Employeer   | Fixter                     |
-| CreditLimit      | 200                        |
+| CreditLimit      | 112                        |
 
-## 🔖 Desafio 2
+## 🔖 Exclusão de cliente
 
-### Exclusão de cliente
-
-- [X] Pré-condição (Desafio 1)
+- [X] Pré-condição
 - [X] Clicar no link Go back to list
-- [X] Clicar na coluna “Search Name” e digitar o conteúdo do Name (Teste Sicredi)
+- [X] Clicar na coluna “Search Name” e digitar o conteúdo do Name (Automação Java - Maven)
 - [X] Clicar no checkbox abaixo da palavra Actions
 - [X] Clicar no botão Delete
 - [X] Validar o texto “Are you sure that you want to delete this 1 item?” através de uma asserção para a popup que será apresentada
@@ -57,12 +50,6 @@
 - [ChromeDriver] - 103.0.5060.53
 
 - https://www.selenium.dev/documentation/webdriver
-
-
-## 🚀 Selenium IDE
-
-- Criada automação do cadastro de cliente pelo Selenium IDE
-- Arquivo: Desafio1_SeleniumIDE.side
 
 
 Feito com 💜 &nbsp;por Jéssica Espíndola da Silva 👋 &nbsp;[Meu linkedin](https://www.linkedin.com/in/j%C3%A9ssica-esp%C3%ADndola-da-silva-81920076/)
